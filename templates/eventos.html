@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brahma - Eventos</title>
+    <link rel="icon" type="image/x-icon" href="/static/img/origen_brahma/favicon.ico"/>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- <header>-->
+     <header>
+         <div class="head">
+             <a class="logo__anchor" href="{% url 'landing_page' %}"><img class="navbar__logo"
+                    src="https://www.brahma.com.ar/static/media/Logo.b805cd1f.svg" alt=""></a>
+
+                    <nav class="navbar">
+                        <a href="{% url 'origen' %}">Origen</a>
+                        <a href="{% url 'cervezas' %}">Cervezas</a>
+                        <a href="{% url 'eventos' %}">Eventos</a>
+                        <a href="{% url 'noticias' %}">Noticias</a>
+                        <a href="{% url 'contacto' %}">Contacto</a>
+                    </nav>
+        </div>
+    </header>
+    <main>
+        <div class="row bg_nav"><span class="t_sorteos">Eventos - Sorteos</span></div>
+        <div class="container bg_sorteos">
+        <hr>       
+            <section class="row" id="sorteo_1">
+                    <div class="evento_img">
+                        <img src="/static/img/eventos/lamagica1.jpg" alt="lamagica" class="img-fluid">
+                    </div>
+    
+                    <div class="evento_descripcion">
+                        <h1 class="txt-titulo1">La M&aacute;gica</h1>
+                        <h4>Una fiesta de cumbia</h4>
+                        <h2 class="txt-titulo2">2 de Junio</h2>
+                        <p>JAMBAO - HERNAN Y LA CAMPIONS LIGA - MARIO LUIS - KARICIA - ZURITA - DIYANEIRO - KUN - GUARACHIS</p>
+                        <div class="btn-f">
+                            <button id="botonSorteo" type="submit" class="btn-form">PARTICIPA POR UN PAR DE ENTRADAS!</button>
+                        </div>
+                    </div>
+            </section>
+            <hr>       
+            <section class="row evento_bg" id="sorteo_2">
+                    <div class="evento_img">
+                        <img src="/static/img/eventos/cfino1.jpg" alt="callejerofino" class="img-fluid">
+                    </div>
+                    <div class="evento_descripcion">
+                        <h1 class="txt-titulo1">Callejero Fino</h1>
+                        <h2 class="txt-titulo2">2 de Julio</h2>
+                        <p>MOVISTAR ARENA</p>
+                        <div class="btn-f">
+                            <button id="botonSorteo" type="submit" class="btn-form">PARTICIPA POR UN PAR DE ENTRADAS!</button>
+                        </div>
+                </div>
+            </section>
+            <hr>
+            <div id="modalSorteo" class="modal">
+                <div class="modal-content">
+                  <div class="close">&times;</div>
+                  <form>
+                    <section class="titulo_sorteo">
+                      <h1 class="tracking-in-expand" id="titulo_sorteo">Ingresa tus datos<br>Ya estas participando</h1>
+                    </section>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre completo">
+                    <input type="email" id="email" name="email" placeholder="Ingrese su e-mail">
+                    <input type="text" id="telefono" name="telefono" placeholder="Telefono">
+                    <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad">
+                    <input type="text" id="pais" name="pais" placeholder="Pais">
+                    <textarea id="mensaje" name="mensaje" placeholder="Deja tu mensaje"></textarea>
+                    <p class="texto-form" style="text-transform: none;">*Campos requeridos. Al enviar el formulario estás aceptando nuestro <strong>Aviso de Privacidad</strong></p>
+                    <input type="submit" value="Enviar">
+                  </form>
+                </div>
+              </div>
+            <hr>
+            <div class="bg_sorteos txt_foot">
+                <h5>😄 PARTICIPÁ POR PREMIOS FLAMA! 😎</h5>.
+                <strong class="txt_foot">🎵🎶 Se viene más música. Se vienen más juntadas 🍻🍻🍻</strong>
+            </div>
+        </div>
+        </main>
+     <footer>
+        <section class="ft-social">
+            <ul><img class="footer__logo" src="https://www.brahma.com.ar/static/media/Logo.b805cd1f.svg" alt=""></a></ul>
+            <ul class="ft-social-list">
+                <li><a href="https://www.instagram.com/cervezabrahma/" target="_blank"><img class="iconFooter"
+                            src="../static/img/redes_soc/004-instagram.png" alt="https://www.flaticon.es/icono-gratis/instagram_1384015" /></a></li>
+
+                <li><a href="https://www.facebook.com/cervezabrahma" target="_blank"><img class="iconFooter"
+                            src="../static/img/redes_soc/003-facebook.png" alt="https://www.flaticon.es/icono-gratis/facebook_1384005" /></a></li>
+
+                <li><a href="https://www.youtube.com/channel/UC24fzmaVPK1RRUlX-jwmHeg" target="_blank"><img
+                            class="iconFooter" src="../static/img/redes_soc/001-youtube.png" alt="https://www.flaticon.es/icono-gratis/youtube_1384012" /></a></li>
+
+                <li><a href="https://mobile.twitter.com/CervezaBrahma" target="_blank"><img class="iconFooter"
+                            src="../static/img/redes_soc/002-gorjeo.png" alt="https://www.flaticon.es/icono-gratis/gorjeo_1384017" /></a></li>
+            </ul>
+            <ul class="legal"><p><b>Beber con moderación.<br> Prohibida la venta a menores de 18 años.<br> © 2020 Cervecería y Maltería Quilmes.</b><br> Todos los derechos reservados.</p></ul>
+        </section>
+    </footer>
+    <script src="/static/js/form.js"></script>
+</body>
+</html>
