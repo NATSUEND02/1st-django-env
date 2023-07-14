@@ -17,6 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .views import home, origen, cervezas, eventos, noticias, contacto, chopp, lager, malzbier 
+from . import views
+from django.contrib.staticfiles.storage import staticfiles_storage
+from django.views.generic.base import RedirectView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -29,4 +32,5 @@ urlpatterns = [
     path("chopp", chopp.as_view(), name = "chopp"),
     path("lager", lager.as_view(), name = "lager"),
     path("malzbier", malzbier.as_view(), name = "malzbier"),
+    path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('img/favicon.ico')))
 ]
